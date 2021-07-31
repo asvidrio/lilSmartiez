@@ -10,4 +10,4 @@ Collaborators:
 
 - Lorena Burrell
 
--
+- Ariel Vidrio
