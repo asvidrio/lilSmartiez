@@ -10,3 +10,19 @@ func main() {
 	r := gin.Default()
 	r.Run(PORT)
 }
+
+func addResource(){
+	
+}
+
+func removeResource() {
+
+}
+
+func updateResource() {
+
+}
+
+func deleteResource() {
+
+}

@@ -1,5 +1,6 @@
 package main
 
-func test() {
+import (
+	"net/http"
+)
 
-}
