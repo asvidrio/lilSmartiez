@@ -18,19 +18,19 @@ import (
 var PORT = ":9000"
 
 var Users []struct {
-	Id primitive.ObjectID
-	Email string	
-	Username string			
-	Password string			
+	Id primitive.ObjectID	`json:"_id,omitempty"`
+	Email string		 	`json:"email,omitempty"`
+	Username string			`json:"username,omitempty"`
+	Password string			`json:"password,omitempty"`
 }
 
 var Resource []struct {
-	Id int
-	Author string 
-	Title string 
-	Description string 
-	Type string 
-	Date string 
+	Id int					`json:"_id,omitempty"`
+	Author string 			`json:"author,omitempty"`
+	Title string 			`json:"title,omitempty"`
+	Description string 		`json:"description,omitempty"`
+	Type string 			`json:"type,omitempty"`
+	Date string 			`json:"date,omitempty"`
 }
 
 func goDotEnvVariable(key string) string {
