@@ -6,7 +6,6 @@ import (
 	"log"
 	"os"
 	"time"
-
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
@@ -20,7 +19,7 @@ import (
 type User struct {
 	Id primitive.ObjectID	`json:"_id,omitempty"`
 	Email string		 	`json:"email,omitempty"`
-	Username string			`json:"username,omitempty,unique"`
+	Username string			`json:"username,omitempty"`
 	Password string			`json:"password,omitempty"`
 }
 
