@@ -15,4 +15,4 @@
 # vendor/
 
 # Ignore configuration file to protect server from leak
-# .env
+.env
