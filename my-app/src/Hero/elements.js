@@ -47,9 +47,10 @@ export const HeroContent = styled.div`
     max-width: 1200px;
     position: absolute;
     padding: 8px 24px;
-    display: flex;
+    display: grid;
     flex-directions: row;
     text-align: center;
+    justify-content: center;
 `
 
 export const HeroH1 = styled.h1`

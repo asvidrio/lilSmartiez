@@ -23,7 +23,7 @@ const Hero = () => {
                     Create an account to keep track of your saved resources.
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>
+                    <Button to='signin' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='false'>
                         Get started {hover ? <ArrowForward /> : <ArrowRight/>}
                     </Button>
                 </HeroBtnWrapper>
