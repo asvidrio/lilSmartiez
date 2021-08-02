@@ -1,3 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"errors"
+	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+)
+
 
 func addResource(c *gin.Context){
 	var resource Resource
@@ -14,6 +25,7 @@ func addResource(c *gin.Context){
 	c.JSON(http.StatusOK, gin.H{"[Successfully created a new resource]":id})
 }
 
+
 func addDBResource(resource *Resource)(primitive.ObjectID, error){
 	client, ctx, cancel := connectToDatabase()
 	defer cancel()
@@ -27,6 +39,7 @@ func addDBResource(resource *Resource)(primitive.ObjectID, error){
 	id := data.InsertedID.(primitive.ObjectID)
 	return id, nil
 }
+
 
 func findResource(c *gin.Context)() {
 	var resource Resource
@@ -50,6 +63,7 @@ func findResource(c *gin.Context)() {
 		})
 }
 
+
 func findDBResource(id primitive.ObjectID)(*Resource, error){
 	var resource *Resource
 	client, ctx, cancel := connectToDatabase()
@@ -68,6 +82,7 @@ func findDBResource(id primitive.ObjectID)(*Resource, error){
 	return resource, nil
 }
 
+
 func findAllResources(c *gin.Context)(){
 	var resources, err = findAllDBResources()
 	if err != nil {
@@ -75,6 +90,7 @@ func findAllResources(c *gin.Context)(){
 	}
 	c.JSON(http.StatusOK, gin.H{"available resources":resources})
 }
+
 
 func findAllDBResources()([]*Resource, error) {
 	var resources []*Resource
@@ -94,9 +110,11 @@ func findAllDBResources()([]*Resource, error) {
 	return resources, nil
 }
 
+
 func updateResource(c *gin.Context) {
 
 }
+
 
 func removeResource(c *gin.Context) {
 
