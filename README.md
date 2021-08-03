@@ -11,3 +11,5 @@ Collaborators:
 - Lorena Burrell
 
 - Ariel Vidrio
+
+- Whitney Omoruyi
